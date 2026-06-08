@@ -1,4 +1,3 @@
-# My-website-
+My-website-
 Simple website for learning.
-mwesigwa Nicholas 
-am stupid 100%
+mwesigwa Nicholas am very simple man for learning 
