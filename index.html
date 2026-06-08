@@ -116,6 +116,35 @@
             color: #666;
             font-size: 0.9em;
         }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .soon-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .soon-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .soon-btn:active {
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
@@ -187,6 +216,10 @@
             <h3>📝 Note</h3>
             <p>This is a work in progress. The website and its purpose will evolve as I continue my learning journey. Stay tuned for updates!</p>
         </section>
+
+        <div class="button-container">
+            <a href="index.1.html" class="soon-btn">soon</a>
+        </div>
 
         <div class="footer">
             <p>Last updated: 2026</p>
