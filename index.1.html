@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="O-Level Physics Revision 1991-2011 with all topics and answers">
-    <meta name="keywords" content="O-Level Physics, Revision, 1991-2011, Questions, Answers">
+    <meta name="description" content="Complete O-Level Physics Notes - All Topics with Laboratory Experiments">
+    <meta name="keywords" content="O-Level Physics, Notes, Laboratory, Experiments, All Topics">
     <meta name="author" content="Nicholas Mwesigwa">
-    <title>O-Level Physics Revision 1991-2011 - My Learning Website</title>
+    <title>O-Level Physics Complete Notes - My Learning Website</title>
     <style>
         * {
             margin: 0;
@@ -24,7 +24,7 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             background: white;
             border-radius: 10px;
@@ -59,59 +59,48 @@
         h3 {
             color: #667eea;
             margin-top: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-size: 1.6em;
             background: #f8f9ff;
-            padding: 15px;
+            padding: 12px;
             border-radius: 8px;
             border-left: 5px solid #667eea;
         }
 
+        h4 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
         .topic-section {
-            margin: 30px 0;
-            padding: 25px;
+            margin: 25px 0;
+            padding: 20px;
             background: #f5f7ff;
             border-radius: 10px;
             border-left: 5px solid #764ba2;
         }
 
-        .question-block {
+        .note-box {
             background: white;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 15px;
+            margin: 15px 0;
             border-radius: 8px;
             border-left: 4px solid #667eea;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .question {
-            color: #764ba2;
-            font-weight: bold;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-
-        .answer {
-            background: #f0f4ff;
+        .definition {
+            background: #fffbea;
             padding: 15px;
             border-radius: 8px;
-            margin-top: 10px;
-            border-left: 3px solid #667eea;
-        }
-
-        .answer-title {
-            color: #667eea;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .answer-text {
-            color: #555;
-            line-height: 1.8;
+            margin: 15px 0;
+            border-left: 4px solid #ffc107;
         }
 
         .formula {
-            background: #fffbea;
+            background: #fff3cd;
             padding: 12px;
             border-radius: 6px;
             margin: 10px 0;
@@ -119,18 +108,82 @@
             border-left: 3px solid #ffc107;
         }
 
-        .tip {
+        .lab-experiment {
             background: #e8f5e9;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 3px solid #4caf50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #4caf50;
         }
 
-        .tip-title {
+        .lab-title {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .lab-section {
+            margin: 15px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .lab-section-title {
             color: #2e7d32;
             font-weight: bold;
             margin-bottom: 8px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .key-point {
+            background: #ffebee;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border-left: 3px solid #f44336;
+        }
+
+        .key-point-title {
+            color: #c62828;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:hover {
+            background: #f5f7ff;
         }
 
         .navigation {
@@ -169,6 +222,11 @@
             color: #999;
         }
 
+        .emoji {
+            font-size: 1.3em;
+            margin-right: 8px;
+        }
+
         .toc {
             background: #f8f9ff;
             padding: 20px;
@@ -187,484 +245,1034 @@
             border-left: 3px solid #667eea;
             padding-left: 15px;
         }
-
-        .emoji {
-            font-size: 1.3em;
-            margin-right: 8px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📚 O-Level Physics Revision (1991-2011)</h1>
-        <p class="subtitle">Complete Physics Topics with Questions and Answers</p>
+        <h1><span class="emoji">📚</span> O-Level Physics - Complete Notes</h1>
+        <p class="subtitle">All Topics with Definitions, Formulas, and Laboratory Experiments</p>
 
         <!-- Table of Contents -->
         <div class="toc">
-            <h3>📖 Topics Covered:</h3>
+            <h3><span class="emoji">📋</span> Topics Covered:</h3>
             <ul>
-                <li>🔢 Mechanics & Motion</li>
-                <li>⚡ Electricity & Magnetism</li>
-                <li>🌊 Waves & Sound</li>
-                <li>💡 Light & Optics</li>
-                <li>🔥 Heat & Thermodynamics</li>
-                <li>⚛️ Atomic Physics</li>
+                <li>1. Measurement & Kinematics</li>
+                <li>2. Forces & Motion (Newton's Laws)</li>
+                <li>3. Energy, Work & Power</li>
+                <li>4. Pressure</li>
+                <li>5. Density & Relative Density</li>
+                <li>6. Waves & Oscillations</li>
+                <li>7. Sound</li>
+                <li>8. Light & Optics</li>
+                <li>9. Electricity</li>
+                <li>10. Magnetism</li>
+                <li>11. Heat & Thermodynamics</li>
+                <li>12. Atomic Physics & Radioactivity</li>
+                <li>13. Physics Laboratory Experiments</li>
             </ul>
         </div>
 
-        <!-- 1. MECHANICS & MOTION -->
-        <h2><span class="emoji">🔢</span> 1. Mechanics & Motion</h2>
+        <!-- 1. MEASUREMENT & KINEMATICS -->
+        <h2><span class="emoji">📏</span> 1. Measurement & Kinematics</h2>
 
         <div class="topic-section">
-            <h3>Kinematics (Motion with Constant Acceleration)</h3>
+            <h3>Physical Quantities & Units</h3>
             
-            <div class="question-block">
-                <div class="question">Q1: A car accelerates uniformly from rest to 30 m/s in 10 seconds. Calculate: (a) acceleration (b) distance covered</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>(a) Acceleration:</strong></p>
-                        <div class="formula">a = (v - u) / t = (30 - 0) / 10 = 3 m/s²</div>
-                        <p><strong>(b) Distance covered:</strong></p>
-                        <div class="formula">s = ut + ½at² = 0 + ½(3)(10)² = 150 m</div>
-                        <p><em>Or using: v² = u² + 2as → 30² = 0 + 2(3)s → s = 150 m</em></p>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Definition:</strong> A physical quantity is a property of an object or phenomenon that can be measured. It has both magnitude and unit.
             </div>
 
-            <div class="question-block">
-                <div class="question">Q2: An object is thrown vertically upward with initial velocity 20 m/s. Find: (a) time to reach maximum height (b) maximum height (use g = 10 m/s²)</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>(a) Time to reach maximum height:</strong></p>
-                        <p>At max height, v = 0</p>
-                        <div class="formula">v = u - gt → 0 = 20 - 10t → t = 2 seconds</div>
-                        <p><strong>(b) Maximum height:</strong></p>
-                        <div class="formula">h = ut - ½gt² = 20(2) - ½(10)(2)² = 40 - 20 = 20 m</div>
-                    </div>
-                </div>
+            <div class="note-box">
+                <h4>SI Base Units:</h4>
+                <table>
+                    <tr>
+                        <th>Quantity</th>
+                        <th>Symbol</th>
+                        <th>SI Unit</th>
+                        <th>Abbreviation</th>
+                    </tr>
+                    <tr>
+                        <td>Length</td>
+                        <td>l</td>
+                        <td>Metre</td>
+                        <td>m</td>
+                    </tr>
+                    <tr>
+                        <td>Mass</td>
+                        <td>m</td>
+                        <td>Kilogram</td>
+                        <td>kg</td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td>t</td>
+                        <td>Second</td>
+                        <td>s</td>
+                    </tr>
+                    <tr>
+                        <td>Current</td>
+                        <td>I</td>
+                        <td>Ampere</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Temperature</td>
+                        <td>T</td>
+                        <td>Kelvin</td>
+                        <td>K</td>
+                    </tr>
+                </table>
             </div>
         </div>
 
         <div class="topic-section">
-            <h3>Forces & Newton's Laws</h3>
+            <h3>Motion (Kinematics)</h3>
             
-            <div class="question-block">
-                <div class="question">Q3: A force of 50 N is applied to a 10 kg mass on a frictionless surface. What is the acceleration?</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p>Using Newton's Second Law: F = ma</p>
-                        <div class="formula">a = F / m = 50 / 10 = 5 m/s²</div>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Displacement:</strong> Distance moved in a specific direction (vector quantity).
+                <strong>Velocity:</strong> Rate of change of displacement (vector). v = s/t
+                <strong>Acceleration:</strong> Rate of change of velocity (vector). a = Δv/t = (v-u)/t
             </div>
 
-            <div class="question-block">
-                <div class="question">Q4: Three forces act on an object: 10 N (East), 6 N (West), and 8 N (North). Find the resultant force and its direction.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>Horizontal component:</strong> 10 - 6 = 4 N (East)</p>
-                        <p><strong>Vertical component:</strong> 8 N (North)</p>
-                        <div class="formula">Resultant = √(4² + 8²) = √(16 + 64) = √80 = 8.94 N</div>
-                        <div class="formula">Direction: tan θ = 8/4 = 2 → θ = 63.4° North of East</div>
-                    </div>
-                </div>
+            <div class="formula">Equations of Motion (constant acceleration):
+                v = u + at
+                s = ut + ½at²
+                v² = u² + 2as
+            </div>
+
+            <div class="key-point">
+                <div class="key-point-title">Key Points:</div>
+                • u = initial velocity, v = final velocity, a = acceleration, t = time, s = displacement
+                • Positive direction is chosen as reference
+                • Deceleration is negative acceleration
+            </div>
+        </div>
+
+        <!-- 2. FORCES & MOTION -->
+        <h2><span class="emoji">💪</span> 2. Forces & Motion (Newton's Laws)</h2>
+
+        <div class="topic-section">
+            <h3>Newton's Laws of Motion</h3>
+            
+            <div class="note-box">
+                <h4>First Law (Law of Inertia):</h4>
+                <p>"An object at rest remains at rest and an object in motion remains in motion unless acted upon by an external force."</p>
+                <p><strong>Implication:</strong> An object has inertia - resistance to change in motion.</p>
+            </div>
+
+            <div class="note-box">
+                <h4>Second Law:</h4>
+                <p>"The rate of change of momentum is directly proportional to the applied force."</p>
+                <div class="formula">F = ma (Force = Mass × Acceleration)</div>
+            </div>
+
+            <div class="note-box">
+                <h4>Third Law:</h4>
+                <p>"For every action, there is an equal and opposite reaction."</p>
+                <p><strong>Example:</strong> When you push a wall, the wall pushes back with equal force.</p>
             </div>
         </div>
 
         <div class="topic-section">
-            <h3>Energy, Work & Power</h3>
+            <h3>Types of Forces</h3>
             
-            <div class="question-block">
-                <div class="question">Q5: A 2 kg object is lifted 5 meters vertically. Calculate the work done (g = 10 m/s²)</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p>Work = Force × Distance (in direction of force)</p>
-                        <div class="formula">W = mgh = 2 × 10 × 5 = 100 J</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">Q6: A machine does 5000 J of work in 25 seconds. What is its power?</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <div class="formula">P = W / t = 5000 / 25 = 200 W</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">Q7: A car of mass 1000 kg has a kinetic energy of 500,000 J. Find its velocity.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <div class="formula">KE = ½mv² → 500,000 = ½(1000)v²</div>
-                        <div class="formula">v² = 1000 → v = 31.6 m/s</div>
-                    </div>
-                </div>
+            <div class="note-box">
+                <ul>
+                    <li><strong>Gravitational Force:</strong> Force of attraction between masses. F = mg (weight)</li>
+                    <li><strong>Friction:</strong> Resistance to motion. F = μN (μ = coefficient of friction, N = normal force)</li>
+                    <li><strong>Tension:</strong> Force in a rope or string pulling an object</li>
+                    <li><strong>Normal Force:</strong> Perpendicular force from a surface</li>
+                    <li><strong>Applied Force:</strong> Force directly applied to an object</li>
+                    <li><strong>Air Resistance:</strong> Friction with air particles</li>
+                </ul>
             </div>
         </div>
 
-        <!-- 2. ELECTRICITY & MAGNETISM -->
-        <h2><span class="emoji">⚡</span> 2. Electricity & Magnetism</h2>
+        <!-- 3. ENERGY, WORK & POWER -->
+        <h2><span class="emoji">⚡</span> 3. Energy, Work & Power</h2>
 
         <div class="topic-section">
-            <h3>Current, Voltage & Resistance</h3>
+            <h3>Work & Energy</h3>
             
-            <div class="question-block">
-                <div class="question">Q8: A 12 V battery supplies 3 A of current to a resistor. Calculate the resistance.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p>Using Ohm's Law: V = IR</p>
-                        <div class="formula">R = V / I = 12 / 3 = 4 Ω</div>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Work:</strong> Product of force and displacement in the direction of force.
+                <div class="formula">W = F × s × cos(θ)</div>
+                Where θ is the angle between force and displacement.
             </div>
 
-            <div class="question-block">
-                <div class="question">Q9: Three resistors of 2 Ω, 3 Ω, and 5 Ω are connected in series. Find total resistance.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p>For series: Total Resistance = R₁ + R₂ + R₃</p>
-                        <div class="formula">R_total = 2 + 3 + 5 = 10 Ω</div>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Energy:</strong> Capacity to do work. Measured in Joules (J).
             </div>
 
-            <div class="question-block">
-                <div class="question">Q10: Two resistors of 6 Ω and 3 Ω are connected in parallel. Find total resistance.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p>For parallel: 1/R_total = 1/R₁ + 1/R₂</p>
-                        <div class="formula">1/R_total = 1/6 + 1/3 = 1/6 + 2/6 = 3/6</div>
-                        <div class="formula">R_total = 2 Ω</div>
-                    </div>
-                </div>
+            <div class="note-box">
+                <h4>Types of Energy:</h4>
+                <ul>
+                    <li><strong>Kinetic Energy:</strong> Energy due to motion. KE = ½mv²</li>
+                    <li><strong>Potential Energy:</strong> Energy due to position. PE = mgh</li>
+                    <li><strong>Elastic PE:</strong> Energy in stretched spring. PE = ½kx²</li>
+                    <li><strong>Heat Energy:</strong> Energy from temperature</li>
+                    <li><strong>Chemical Energy:</strong> Energy in chemical bonds</li>
+                    <li><strong>Nuclear Energy:</strong> Energy in atomic nucleus</li>
+                </ul>
+            </div>
+
+            <div class="key-point">
+                <div class="key-point-title">Law of Conservation of Energy:</div>
+                Energy cannot be created or destroyed, only converted from one form to another.
+                Total Energy = Constant
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Power</h3>
+            
+            <div class="definition">
+                <strong>Power:</strong> Rate of doing work or rate of energy transfer.
+                <div class="formula">P = W/t (Watts, W)</div>
+                Also: P = Fv (Power = Force × Velocity)
+            </div>
+        </div>
+
+        <!-- 4. PRESSURE -->
+        <h2><span class="emoji">📊</span> 4. Pressure</h2>
+
+        <div class="topic-section">
+            <h3>Pressure Definition & Formulas</h3>
+            
+            <div class="definition">
+                <strong>Pressure:</strong> Force per unit area perpendicular to the surface.
+                <div class="formula">P = F/A (Pascal, Pa)</div>
+                1 Pa = 1 N/m²
+            </div>
+
+            <div class="note-box">
+                <h4>Types of Pressure:</h4>
+                <ul>
+                    <li><strong>Atmospheric Pressure:</strong> Pressure of air above. 101,325 Pa = 1 atm = 760 mmHg</li>
+                    <li><strong>Gauge Pressure:</strong> Pressure above atmospheric</li>
+                    <li><strong>Absolute Pressure:</strong> Total pressure (gauge + atmospheric)</li>
+                </ul>
+            </div>
+
+            <div class="formula">Pressure in Liquids:
+                P = ρgh
+                Where ρ = density, g = acceleration due to gravity, h = height
+            </div>
+        </div>
+
+        <!-- 5. DENSITY -->
+        <h2><span class="emoji">🎯</span> 5. Density & Relative Density</h2>
+
+        <div class="topic-section">
+            <h3>Density</h3>
+            
+            <div class="definition">
+                <strong>Density:</strong> Mass per unit volume.
+                <div class="formula">ρ = m/V (kg/m³ or g/cm³)</div>
+            </div>
+
+            <div class="note-box">
+                <h4>Densities of Common Substances (at 20°C):</h4>
+                <table>
+                    <tr>
+                        <th>Substance</th>
+                        <th>Density (kg/m³)</th>
+                    </tr>
+                    <tr>
+                        <td>Water</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>Aluminum</td>
+                        <td>2700</td>
+                    </tr>
+                    <tr>
+                        <td>Iron</td>
+                        <td>7800</td>
+                    </tr>
+                    <tr>
+                        <td>Copper</td>
+                        <td>8900</td>
+                    </tr>
+                    <tr>
+                        <td>Lead</td>
+                        <td>11,300</td>
+                    </tr>
+                    <tr>
+                        <td>Mercury</td>
+                        <td>13,600</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="definition">
+                <strong>Relative Density (Specific Gravity):</strong> Ratio of density of substance to density of water.
+                <div class="formula">Relative Density = Density of substance / Density of water</div>
+                No units (dimensionless)
+            </div>
+        </div>
+
+        <!-- 6. WAVES & OSCILLATIONS -->
+        <h2><span class="emoji">🌊</span> 6. Waves & Oscillations</h2>
+
+        <div class="topic-section">
+            <h3>Simple Harmonic Motion (SHM)</h3>
+            
+            <div class="definition">
+                <strong>SHM:</strong> Motion where acceleration is directly proportional to displacement and directed toward the equilibrium position.
+                <div class="formula">a = -ω²x</div>
+                Where ω = angular frequency = 2πf
+            </div>
+
+            <div class="note-box">
+                <h4>Characteristics of SHM:</h4>
+                <ul>
+                    <li>Oscillation about a fixed point (equilibrium)</li>
+                    <li>Maximum displacement = Amplitude (A)</li>
+                    <li>Time for one complete oscillation = Period (T)</li>
+                    <li>Number of oscillations per second = Frequency (f)</li>
+                    <li>T = 1/f</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Wave Properties</h3>
+            
+            <div class="definition">
+                <strong>Wave:</strong> Disturbance that travels through space, carrying energy.
+            </div>
+
+            <div class="note-box">
+                <h4>Types of Waves:</h4>
+                <ul>
+                    <li><strong>Transverse Waves:</strong> Vibration perpendicular to wave direction (light, water waves)</li>
+                    <li><strong>Longitudinal Waves:</strong> Vibration parallel to wave direction (sound, ultrasound)</li>
+                </ul>
+            </div>
+
+            <div class="formula">Wave Equation:
+                v = fλ
+                Where v = wave speed, f = frequency, λ = wavelength
+            </div>
+
+            <div class="note-box">
+                <h4>Wave Phenomena:</h4>
+                <ul>
+                    <li><strong>Reflection:</strong> Wave bounces back from surface</li>
+                    <li><strong>Refraction:</strong> Wave bends when moving between different media</li>
+                    <li><strong>Diffraction:</strong> Wave bends around obstacles or through gaps</li>
+                    <li><strong>Interference:</strong> Waves combine to produce constructive or destructive interference</li>
+                    <li><strong>Polarization:</strong> Wave vibration in one plane (transverse waves only)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 7. SOUND -->
+        <h2><span class="emoji">🔊</span> 7. Sound</h2>
+
+        <div class="topic-section">
+            <h3>Sound Waves</h3>
+            
+            <div class="definition">
+                <strong>Sound:</strong> Longitudinal wave created by vibrating objects, travels through elastic media.
+            </div>
+
+            <div class="note-box">
+                <h4>Speed of Sound in Different Media (at 20°C):</h4>
+                <ul>
+                    <li>Air: ~340 m/s</li>
+                    <li>Water: ~1,480 m/s</li>
+                    <li>Steel: ~5,000 m/s</li>
+                </ul>
+            </div>
+
+            <div class="definition">
+                <strong>Frequency Range:</strong>
+                • Infrasound: < 20 Hz
+                • Audible: 20 Hz - 20,000 Hz
+                • Ultrasound: > 20,000 Hz
+            </div>
+
+            <div class="note-box">
+                <h4>Sound Phenomena:</h4>
+                <ul>
+                    <li><strong>Echo:</strong> Sound reflection from distant surface (returns after noticeable delay)</li>
+                    <li><strong>Reverberation:</strong> Multiple reflections creating lingering sound</li>
+                    <li><strong>Doppler Effect:</strong> Frequency change when source/observer moves</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 8. LIGHT & OPTICS -->
+        <h2><span class="emoji">💡</span> 8. Light & Optics</h2>
+
+        <div class="topic-section">
+            <h3>Nature of Light</h3>
+            
+            <div class="definition">
+                <strong>Light:</strong> Electromagnetic wave that is visible to human eye. Speed in vacuum = 3×10⁸ m/s
+            </div>
+
+            <div class="note-box">
+                <h4>Electromagnetic Spectrum (in order of increasing frequency):</h4>
+                <ul>
+                    <li>Radio waves (longest wavelength)</li>
+                    <li>Microwaves</li>
+                    <li>Infrared</li>
+                    <li>Visible light (ROYGBIV)</li>
+                    <li>Ultraviolet</li>
+                    <li>X-rays</li>
+                    <li>Gamma rays (shortest wavelength)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Reflection of Light</h3>
+            
+            <div class="note-box">
+                <h4>Laws of Reflection:</h4>
+                <ol>
+                    <li>Angle of incidence equals angle of reflection</li>
+                    <li>Incident ray, reflected ray, and normal lie in same plane</li>
+                    <li>Angles measured from normal (perpendicular)</li>
+                </ol>
+            </div>
+
+            <div class="note-box">
+                <h4>Types of Mirrors:</h4>
+                <ul>
+                    <li><strong>Plane Mirror:</strong> Flat surface. Image: virtual, erect, same size, laterally inverted</li>
+                    <li><strong>Concave Mirror:</strong> Converging. Can form real or virtual images</li>
+                    <li><strong>Convex Mirror:</strong> Diverging. Always forms virtual, erect, diminished image</li>
+                </ul>
+            </div>
+
+            <div class="formula">Mirror Formula:
+                1/f = 1/u + 1/v
+                Where f = focal length, u = object distance, v = image distance
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Refraction of Light</h3>
+            
+            <div class="definition">
+                <strong>Refraction:</strong> Bending of light when it passes from one medium to another of different optical density.
+            </div>
+
+            <div class="formula">Snell's Law:
+                n₁sinθ₁ = n₂sinθ₂
+                Where n = refractive index, θ = angle from normal
+            </div>
+
+            <div class="note-box">
+                <h4>Refractive Index of Common Substances:</h4>
+                <ul>
+                    <li>Air: 1.0</li>
+                    <li>Water: 1.33</li>
+                    <li>Glass: 1.5</li>
+                    <li>Diamond: 2.42</li>
+                </ul>
+            </div>
+
+            <div class="definition">
+                <strong>Critical Angle:</strong> Angle of incidence at which refracted angle = 90°. Beyond this, total internal reflection occurs.
+                <div class="formula">sinθc = n₂/n₁ (when n₂ < n₁)</div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Lenses</h3>
+            
+            <div class="note-box">
+                <h4>Types of Lenses:</h4>
+                <ul>
+                    <li><strong>Convex (Converging):</strong> Thicker at center. Converges parallel rays to focal point</li>
+                    <li><strong>Concave (Diverging):</strong> Thinner at center. Diverges parallel rays</li>
+                </ul>
+            </div>
+
+            <div class="formula">Lens Formula:
+                1/f = 1/u + 1/v
+                Power of lens P = 1/f (in Diopters, D)
+            </div>
+
+            <div class="note-box">
+                <h4>Lens Magnification:</h4>
+                <div class="formula">m = v/u = -height of image / height of object</div>
+                • m > 1: Image magnified
+                • m < 1: Image reduced
+                • m negative: Image inverted (real)
+            </div>
+        </div>
+
+        <!-- 9. ELECTRICITY -->
+        <h2><span class="emoji">⚡</span> 9. Electricity</h2>
+
+        <div class="topic-section">
+            <h3>Electric Charge & Current</h3>
+            
+            <div class="definition">
+                <strong>Electric Charge:</strong> Property of matter (electrons have negative, protons positive). Measured in Coulombs (C).
+                <div class="formula">Q = ne (charge = number of electrons × electron charge)
+                e = 1.6 × 10⁻¹⁹ C</div>
+            </div>
+
+            <div class="definition">
+                <strong>Electric Current:</strong> Flow of charge per unit time.
+                <div class="formula">I = Q/t (Amperes, A)</div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Potential Difference & Resistance</h3>
+            
+            <div class="definition">
+                <strong>Potential Difference (Voltage):</strong> Energy given to charge per unit charge.
+                <div class="formula">V = W/Q (Volts, V)</div>
+            </div>
+
+            <div class="definition">
+                <strong>Resistance:</strong> Opposition to flow of current.
+                <div class="formula">R = V/I (Ohms, Ω)</div>
+            </div>
+
+            <div class="note-box">
+                <h4>Factors Affecting Resistance:</h4>
+                <div class="formula">R = ρl/A
+                Where ρ = resistivity, l = length, A = cross-sectional area</div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>EMF & Internal Resistance</h3>
+            
+            <div class="definition">
+                <strong>EMF (Electromotive Force):</strong> Energy provided by source per unit charge.
+                <div class="formula">E = I(R + r)
+                Where R = external resistance, r = internal resistance</div>
+            </div>
+
+            <div class="note-box">
+                <h4>Terminal Voltage:</h4>
+                <div class="formula">V = E - Ir</div>
             </div>
         </div>
 
         <div class="topic-section">
             <h3>Electrical Power & Energy</h3>
             
-            <div class="question-block">
-                <div class="question">Q11: An electric bulb rated 100 W at 200 V is used for 5 hours. Calculate energy consumed in kWh.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <div class="formula">Energy = Power × Time = 100 W × 5 h = 500 Wh = 0.5 kWh</div>
-                    </div>
-                </div>
+            <div class="formula">Power: P = VI = I²R = V²/R (Watts, W)
+            Energy: E = Pt = VIt (Joules, J)</div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Circuits</h3>
+            
+            <div class="note-box">
+                <h4>Series Circuits:</h4>
+                <ul>
+                    <li>Same current through all components</li>
+                    <li>Total resistance: R = R₁ + R₂ + R₃...</li>
+                    <li>Voltage divides: V = V₁ + V₂ + V₃...</li>
+                </ul>
             </div>
 
-            <div class="question-block">
-                <div class="question">Q12: Calculate the current in a 1500 W heater when connected to a 250 V supply.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <div class="formula">P = VI → I = P / V = 1500 / 250 = 6 A</div>
-                    </div>
-                </div>
+            <div class="note-box">
+                <h4>Parallel Circuits:</h4>
+                <ul>
+                    <li>Same voltage across all components</li>
+                    <li>Total resistance: 1/R = 1/R₁ + 1/R₂ + 1/R₃...</li>
+                    <li>Current divides: I = I₁ + I₂ + I₃...</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 10. MAGNETISM -->
+        <h2><span class="emoji">🧲</span> 10. Magnetism</h2>
+
+        <div class="topic-section">
+            <h3>Magnetic Fields & Forces</h3>
+            
+            <div class="definition">
+                <strong>Magnetic Field:</strong> Region where magnetic forces are exerted on magnetic poles or moving charges.
+            </div>
+
+            <div class="note-box">
+                <h4>Sources of Magnetic Fields:</h4>
+                <ul>
+                    <li>Permanent magnets (always magnetized)</li>
+                    <li>Current-carrying conductors (create field around wire)</li>
+                    <li>Electromagnets (coil with current)</li>
+                    <li>Earth (geomagnetic field)</li>
+                </ul>
+            </div>
+
+            <div class="definition">
+                <strong>Magnetic Force on Current-Carrying Conductor:</strong>
+                <div class="formula">F = BIl sinθ
+                Where B = magnetic field strength, I = current, l = length of conductor, θ = angle</div>
+            </div>
+
+            <div class="note-box">
+                <h4>Fleming's Left-Hand Rule (Motor Rule):</h4>
+                <ul>
+                    <li>Thumb: Direction of force/motion</li>
+                    <li>First finger: Magnetic field direction (N to S)</li>
+                    <li>Second finger: Current direction</li>
+                </ul>
             </div>
         </div>
 
         <div class="topic-section">
-            <h3>Magnetism</h3>
+            <h3>Electromagnetic Induction</h3>
             
-            <div class="question-block">
-                <div class="question">Q13: What is the direction of the magnetic force on a current-carrying conductor in a magnetic field?</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>Fleming's Left-Hand Rule:</strong></p>
-                        <p>• Thumb = direction of motion/force</p>
-                        <p>• First finger = direction of magnetic Field (N to S)</p>
-                        <p>• Second finger = direction of Current</p>
-                        <p>The force is perpendicular to both the current and magnetic field.</p>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Electromagnetic Induction:</strong> Generation of EMF when magnetic field changes through a coil.
+            </div>
+
+            <div class="formula">Faraday's Law:
+                EMF = -N × dΦ/dt
+                Where N = number of turns, Φ = magnetic flux</div>
+
+            <div class="note-box">
+                <h4>Fleming's Right-Hand Rule (Generator Rule):</h4>
+                <ul>
+                    <li>Thumb: Direction of motion</li>
+                    <li>First finger: Magnetic field (N to S)</li>
+                    <li>Second finger: Induced current</li>
+                </ul>
             </div>
         </div>
 
-        <!-- 3. WAVES & SOUND -->
-        <h2><span class="emoji">🌊</span> 3. Waves & Sound</h2>
-
-        <div class="topic-section">
-            <h3>Wave Properties</h3>
-            
-            <div class="question-block">
-                <div class="question">Q14: A wave has a wavelength of 4 m and frequency of 5 Hz. Calculate its speed.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <div class="formula">v = f × λ = 5 × 4 = 20 m/s</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">Q15: Sound travels at 340 m/s. If the wavelength is 0.85 m, find the frequency.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <div class="formula">f = v / λ = 340 / 0.85 = 400 Hz</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="topic-section">
-            <h3>Sound & Acoustics</h3>
-            
-            <div class="question-block">
-                <div class="question">Q16: What is an echo? Explain how echo is used to measure distance.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>Echo:</strong> A sound wave that reflects from a surface and returns to the source.</p>
-                        <p><strong>Distance measurement:</strong></p>
-                        <p>• Send a sound signal toward an object</p>
-                        <p>• Measure time (t) for echo to return</p>
-                        <p>• Distance to object = (v × t) / 2</p>
-                        <p>• We divide by 2 because sound travels to object and back</p>
-                        <p><strong>Example:</strong> If echo returns in 2 seconds at 340 m/s:</p>
-                        <div class="formula">Distance = (340 × 2) / 2 = 340 m</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4. LIGHT & OPTICS -->
-        <h2><span class="emoji">💡</span> 4. Light & Optics</h2>
-
-        <div class="topic-section">
-            <h3>Reflection & Refraction</h3>
-            
-            <div class="question-block">
-                <div class="question">Q17: State the laws of reflection of light.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>Laws of Reflection:</strong></p>
-                        <p>1. The angle of incidence equals the angle of reflection</p>
-                        <p>2. The incident ray, reflected ray, and normal all lie in the same plane</p>
-                        <p>3. The angles are measured from the normal (perpendicular to surface)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">Q18: Light travels from air (n=1) into water (n=1.33) at an angle of 45°. Calculate the angle of refraction.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p>Using Snell's Law: n₁sin θ₁ = n₂sin θ₂</p>
-                        <div class="formula">1 × sin(45°) = 1.33 × sin(θ₂)</div>
-                        <div class="formula">0.707 = 1.33 × sin(θ₂)</div>
-                        <div class="formula">sin(θ₂) = 0.531 → θ₂ = 32.1°</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="topic-section">
-            <h3>Lenses & Mirrors</h3>
-            
-            <div class="question-block">
-                <div class="question">Q19: A concave mirror has a focal length of 10 cm. An object is placed 30 cm from the mirror. Find the image distance and magnification.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p>Using mirror formula: 1/f = 1/u + 1/v</p>
-                        <div class="formula">1/10 = 1/30 + 1/v</div>
-                        <div class="formula">1/v = 1/10 - 1/30 = 3/30 - 1/30 = 2/30</div>
-                        <div class="formula">v = 15 cm (real, inverted image)</div>
-                        <p><strong>Magnification:</strong></p>
-                        <div class="formula">m = -v/u = -15/30 = -0.5</div>
-                        <p>Image is 0.5 times the size of object and inverted</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">Q20: What is the power of a convex lens with focal length 50 cm?</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <div class="formula">Power = 1/f (in meters)</div>
-                        <div class="formula">P = 1/0.5 = +2 Diopters (D)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 5. HEAT & THERMODYNAMICS -->
-        <h2><span class="emoji">🔥</span> 5. Heat & Thermodynamics</h2>
+        <!-- 11. HEAT & THERMODYNAMICS -->
+        <h2><span class="emoji">🔥</span> 11. Heat & Thermodynamics</h2>
 
         <div class="topic-section">
             <h3>Temperature & Heat</h3>
             
-            <div class="question-block">
-                <div class="question">Q21: Convert 25°C to Kelvin and Fahrenheit.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>To Kelvin:</strong></p>
-                        <div class="formula">K = °C + 273 = 25 + 273 = 298 K</div>
-                        <p><strong>To Fahrenheit:</strong></p>
-                        <div class="formula">°F = (9/5 × °C) + 32 = (9/5 × 25) + 32 = 45 + 32 = 77°F</div>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Temperature:</strong> Measure of average kinetic energy of particles.
             </div>
 
-            <div class="question-block">
-                <div class="question">Q22: How much heat is required to raise the temperature of 2 kg of water by 20°C? (Specific heat capacity of water = 4200 J/kg°C)</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <div class="formula">Q = mcΔT = 2 × 4200 × 20 = 168,000 J = 168 kJ</div>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Heat:</strong> Energy transferred between objects due to temperature difference.
+            </div>
+
+            <div class="note-box">
+                <h4>Temperature Scales:</h4>
+                <div class="formula">Celsius to Kelvin: K = °C + 273
+                Celsius to Fahrenheit: °F = (9/5 × °C) + 32</div>
             </div>
         </div>
 
         <div class="topic-section">
-            <h3>Expansion & States of Matter</h3>
+            <h3>Heat Capacity & Specific Heat</h3>
             
-            <div class="question-block">
-                <div class="question">Q23: A metal rod of length 1 m at 20°C is heated to 120°C. If the linear expansion coefficient is 12×10⁻⁶ /°C, find the new length.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <div class="formula">ΔL = αL₀ΔT = 12×10⁻⁶ × 1 × (120-20)</div>
-                        <div class="formula">ΔL = 12×10⁻⁶ × 100 = 1.2×10⁻³ m = 0.0012 m</div>
-                        <div class="formula">New length = 1 + 0.0012 = 1.0012 m</div>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Heat Capacity:</strong> Energy needed to raise temperature of object by 1°C.
+                <div class="formula">C = Q/ΔT</div>
+            </div>
+
+            <div class="definition">
+                <strong>Specific Heat Capacity:</strong> Energy needed to raise 1 kg by 1°C.
+                <div class="formula">c = Q/(mΔT)
+                Q = mcΔT</div>
+            </div>
+
+            <div class="note-box">
+                <h4>Specific Heat of Common Substances:</h4>
+                <ul>
+                    <li>Water: 4200 J/kg°C</li>
+                    <li>Aluminum: 900 J/kg°C</li>
+                    <li>Iron: 450 J/kg°C</li>
+                    <li>Lead: 130 J/kg°C</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Latent Heat</h3>
+            
+            <div class="definition">
+                <strong>Latent Heat:</strong> Energy absorbed/released during phase change without temperature change.
+            </div>
+
+            <div class="formula">Q = mL
+            Where L = latent heat of fusion or vaporization</div>
+
+            <div class="note-box">
+                <h4>Latent Heat Values (for water):</h4>
+                <ul>
+                    <li>Fusion (solid→liquid): 334,000 J/kg</li>
+                    <li>Vaporization (liquid→gas): 2,260,000 J/kg</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Thermal Expansion</h3>
+            
+            <div class="definition">
+                <strong>Linear Expansion:</strong>
+                <div class="formula">ΔL = αL₀ΔT
+                New length: L = L₀(1 + αΔT)</div>
+            </div>
+
+            <div class="definition">
+                <strong>Volume Expansion:</strong>
+                <div class="formula">ΔV = γV₀ΔT
+                New volume: V = V₀(1 + γΔT)</div>
             </div>
         </div>
 
         <div class="topic-section">
             <h3>Thermodynamics Laws</h3>
             
-            <div class="question-block">
-                <div class="question">Q24: State the First Law of Thermodynamics.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>First Law of Thermodynamics:</strong></p>
-                        <p>"The change in internal energy of a system equals the heat added to the system minus the work done by the system."</p>
-                        <div class="formula">ΔU = Q - W</div>
-                        <p>Where:</p>
-                        <p>• ΔU = change in internal energy</p>
-                        <p>• Q = heat added to the system</p>
-                        <p>• W = work done by the system</p>
-                    </div>
-                </div>
+            <div class="note-box">
+                <h4>Zeroth Law:</h4>
+                <p>If A and B are in thermal equilibrium, and B and C are in thermal equilibrium, then A and C are in thermal equilibrium.</p>
+            </div>
+
+            <div class="note-box">
+                <h4>First Law:</h4>
+                <div class="formula">ΔU = Q - W
+                Change in internal energy = Heat added - Work done by gas</div>
+            </div>
+
+            <div class="note-box">
+                <h4>Second Law:</h4>
+                <p>Entropy of an isolated system increases or remains constant (never decreases). Heat flows naturally from hot to cold.</p>
             </div>
         </div>
 
-        <!-- 6. ATOMIC PHYSICS -->
-        <h2><span class="emoji">⚛️</span> 6. Atomic Physics</h2>
+        <!-- 12. ATOMIC PHYSICS & RADIOACTIVITY -->
+        <h2><span class="emoji">⚛️</span> 12. Atomic Physics & Radioactivity</h2>
 
         <div class="topic-section">
             <h3>Atomic Structure</h3>
             
-            <div class="question-block">
-                <div class="question">Q25: Describe the structure of an atom according to Bohr's model.</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>Bohr's Atomic Model:</strong></p>
-                        <p>• The nucleus contains protons and neutrons at the center</p>
-                        <p>• Electrons orbit the nucleus in fixed circular orbits (shells/energy levels)</p>
-                        <p>• Each shell can hold a maximum number of electrons</p>
-                        <p>• Electrons jump between orbits by absorbing or emitting energy</p>
-                        <p>• The innermost shell (K shell) can hold max 2 electrons</p>
-                        <p>• The next shell (L shell) can hold max 8 electrons</p>
-                        <p>• The outermost shell determines chemical properties</p>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Atom:</strong> Smallest unit of matter with nucleus (protons + neutrons) surrounded by electrons in orbits.
             </div>
 
-            <div class="question-block">
-                <div class="question">Q26: What is the difference between atomic number and mass number?</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>Atomic Number (Z):</strong></p>
-                        <p>• Number of protons in the nucleus</p>
-                        <p>• Determines the element's identity</p>
-                        <p>• Determines number of electrons (in neutral atom)</p>
-                        <p><strong>Mass Number (A):</strong></p>
-                        <p>• Total number of protons + neutrons</p>
-                        <p>• Determines the isotope</p>
-                        <div class="formula">Number of neutrons = A - Z</div>
-                        <p><strong>Example: Carbon-12 (¹²C)</strong></p>
-                        <p>• Atomic number = 6 (6 protons)</p>
-                        <p>• Mass number = 12 (6 protons + 6 neutrons)</p>
-                    </div>
-                </div>
+            <div class="note-box">
+                <h4>Subatomic Particles:</h4>
+                <table>
+                    <tr>
+                        <th>Particle</th>
+                        <th>Location</th>
+                        <th>Charge</th>
+                        <th>Mass (u)</th>
+                    </tr>
+                    <tr>
+                        <td>Proton</td>
+                        <td>Nucleus</td>
+                        <td>+1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Neutron</td>
+                        <td>Nucleus</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Electron</td>
+                        <td>Orbit</td>
+                        <td>-1</td>
+                        <td>1/1836</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h3>Nuclear Notation & Isotopes</h3>
+            
+            <div class="note-box">
+                <h4>Nuclear Notation:</h4>
+                <div class="formula">ᴬₓX
+                Where A = mass number (protons + neutrons)
+                Z = atomic number (number of protons)
+                X = element symbol</div>
+            </div>
+
+            <div class="definition">
+                <strong>Isotopes:</strong> Same element (same Z) but different mass numbers (different neutrons).
+                <strong>Examples:</strong> ¹²C, ¹³C, ¹⁴C (all carbon)
             </div>
         </div>
 
         <div class="topic-section">
             <h3>Radioactivity</h3>
             
-            <div class="question-block">
-                <div class="question">Q27: What are alpha, beta, and gamma radiations? What are they composed of?</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p><strong>Alpha (α) Radiation:</strong></p>
-                        <p>• Composed of Helium-4 nuclei (2 protons + 2 neutrons)</p>
-                        <p>• Least penetrating (stopped by paper)</p>
-                        <p>• Positive charge</p>
-                        <p><strong>Beta (β) Radiation:</strong></p>
-                        <p>• Composed of electrons (from neutron decay)</p>
-                        <p>• More penetrating than alpha (need aluminum foil)</p>
-                        <p>• Negative charge</p>
-                        <p><strong>Gamma (γ) Radiation:</strong></p>
-                        <p>• Electromagnetic waves (high energy photons)</p>
-                        <p>• Most penetrating (need lead/concrete)</p>
-                        <p>• No charge</p>
-                    </div>
-                </div>
+            <div class="definition">
+                <strong>Radioactivity:</strong> Spontaneous emission of radiation from unstable nuclei to reach stability.
             </div>
 
-            <div class="question-block">
-                <div class="question">Q28: A radioactive sample has a half-life of 5 years. If initial mass is 100 g, how much remains after 15 years?</div>
-                <div class="answer">
-                    <div class="answer-title">✓ Answer:</div>
-                    <div class="answer-text">
-                        <p>Number of half-lives in 15 years = 15 / 5 = 3 half-lives</p>
-                        <div class="formula">After 1st half-life (5 yrs): 100 → 50 g</div>
-                        <div class="formula">After 2nd half-life (10 yrs): 50 → 25 g</div>
-                        <div class="formula">After 3rd half-life (15 yrs): 25 → 12.5 g</div>
-                        <p>Or: N = N₀ × (1/2)ⁿ = 100 × (1/2)³ = 100 × 1/8 = 12.5 g</p>
-                    </div>
-                </div>
+            <div class="note-box">
+                <h4>Types of Radioactive Decay:</h4>
+                <ul>
+                    <li><strong>Alpha (α) Decay:</strong> Emission of ⁴₂He nucleus (2p + 2n)
+                        Result: Mass number ↓ 4, Atomic number ↓ 2</li>
+                    <li><strong>Beta (β) Decay:</strong> Emission of electron from neutron → proton
+                        Result: Mass number unchanged, Atomic number ↑ 1</li>
+                    <li><strong>Gamma (γ) Decay:</strong> Emission of high-energy photon
+                        Result: No change in mass or atomic number</li>
+                </ul>
+            </div>
+
+            <div class="definition">
+                <strong>Half-Life (t₁/₂):</strong> Time for half of radioactive sample to decay.
+                <div class="formula">N = N₀ × (1/2)ⁿ
+                Where n = number of half-lives</div>
             </div>
         </div>
 
-        <div class="tip">
-            <div class="tip-title">💡 Study Tips for O-Level Physics (1991-2011)</div>
-            <p>✓ Practice past paper questions regularly</p>
-            <p>✓ Learn all formulas and when to use them</p>
-            <p>✓ Show all working in calculations</p>
-            <p>✓ Include units in all answers</p>
-            <p>✓ Draw clear diagrams for optics and wave problems</p>
-            <p>✓ Understand concepts, don't just memorize</p>
-            <p>✓ Use the equations sheet provided in exams</p>
-            <p>✓ Practice numerical problems regularly</p>
+        <!-- 13. LABORATORY EXPERIMENTS -->
+        <h2><span class="emoji">🔬</span> 13. Physics Laboratory Experiments</h2>
+
+        <div class="lab-experiment">
+            <div class="lab-title">Experiment 1: Measurement of Density Using Displacement Method</div>
+            
+            <div class="lab-section">
+                <div class="lab-section-title">Aim:</div>
+                <p>To measure the density of an irregular solid using water displacement method.</p>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Apparatus:</div>
+                <ul>
+                    <li>Measuring cylinder (100 mL)</li>
+                    <li>Water</li>
+                    <li>Irregular solid (stone/metal piece)</li>
+                    <li>Balance/scale</li>
+                </ul>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Procedure:</div>
+                <ol>
+                    <li>Measure mass of solid using balance</li>
+                    <li>Fill measuring cylinder with water to known level (e.g., 50 mL)</li>
+                    <li>Submerge solid in water gently</li>
+                    <li>Record new water level</li>
+                    <li>Volume of solid = Final volume - Initial volume</li>
+                    <li>Calculate density using ρ = m/V</li>
+                </ol>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Precautions:</div>
+                <ul>
+                    <li>Ensure solid is completely submerged</li>
+                    <li>Don't pour water on solid (use string to lower it)</li>
+                    <li>Read meniscus at eye level</li>
+                    <li>Use accurate measuring instruments</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lab-experiment">
+            <div class="lab-title">Experiment 2: Verification of Ohm's Law</div>
+            
+            <div class="lab-section">
+                <div class="lab-section-title">Aim:</div>
+                <p>To verify that current through a resistor is directly proportional to voltage (I ∝ V at constant R).</p>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Apparatus:</div>
+                <ul>
+                    <li>Battery/Power supply (variable)</li>
+                    <li>Resistor</li>
+                    <li>Ammeter</li>
+                    <li>Voltmeter</li>
+                    <li>Rheostat (variable resistor)</li>
+                    <li>Connecting wires</li>
+                    <li>Switch</li>
+                </ul>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Circuit Diagram:</div>
+                <p>Battery → Switch → Rheostat → Resistor → Ammeter → back to Battery</p>
+                <p>Voltmeter connected in parallel across resistor</p>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Procedure:</div>
+                <ol>
+                    <li>Set up circuit as shown</li>
+                    <li>Close switch and adjust rheostat to different positions</li>
+                    <li>For each position, record voltage (V) and current (I)</li>
+                    <li>Take at least 5 different readings</li>
+                    <li>Calculate R = V/I for each reading</li>
+                    <li>Plot graph of I vs V (should be straight line through origin)</li>
+                    <li>Calculate slope = 1/R</li>
+                </ol>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Precautions:</div>
+                <ul>
+                    <li>Check ammeter polarity before use</li>
+                    <li>Don't exceed maximum current rating</li>
+                    <li>Close switch only when adjustments complete</li>
+                    <li>Use appropriate ranges for meters</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lab-experiment">
+            <div class="lab-title">Experiment 3: Determination of Focal Length of Convex Lens</div>
+            
+            <div class="lab-section">
+                <div class="lab-section-title">Aim:</div>
+                <p>To determine focal length of convex lens using lens formula.</p>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Apparatus:</div>
+                <ul>
+                    <li>Convex lens</li>
+                    <li>Optical bench with scale</li>
+                    <li>Object (candle/object pin)</li>
+                    <li>Screen</li>
+                    <li>Lens holder</li>
+                </ul>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Procedure:</div>
+                <ol>
+                    <li>Place object at one end of optical bench</li>
+                    <li>Place lens and screen to form real image on screen</li>
+                    <li>Measure object distance (u) and image distance (v)</li>
+                    <li>Repeat for at least 5 different object positions</li>
+                    <li>Use lens formula: 1/f = 1/u + 1/v to calculate f</li>
+                    <li>Average the focal length values</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="lab-experiment">
+            <div class="lab-title">Experiment 4: Study of Simple Pendulum & Verification of T ∝ √L</div>
+            
+            <div class="lab-section">
+                <div class="lab-section-title">Aim:</div>
+                <p>To verify that period of simple pendulum is proportional to √L (T ∝ √L).</p>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Apparatus:</div>
+                <ul>
+                    <li>Simple pendulum set-up</li>
+                    <li>Measuring scale</li>
+                    <li>Stopwatch</li>
+                    <li>Bob</li>
+                    <li>Stand and clamp</li>
+                </ul>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Procedure:</div>
+                <ol>
+                    <li>Adjust pendulum length to 20 cm</li>
+                    <li>Displace bob slightly and release</li>
+                    <li>Count 20 complete oscillations using stopwatch</li>
+                    <li>Calculate period T = Time/20</li>
+                    <li>Repeat for lengths: 20, 30, 40, 50, 60, 70, 80 cm</li>
+                    <li>Plot graph of T vs √L (should be straight line)</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="lab-experiment">
+            <div class="lab-title">Experiment 5: Laws of Reflection Using Plane Mirror</div>
+            
+            <div class="lab-section">
+                <div class="lab-section-title">Aim:</div>
+                <p>To verify laws of reflection using plane mirror and pins.</p>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Apparatus:</div>
+                <ul>
+                    <li>Plane mirror</li>
+                    <li>Four pins of same height</li>
+                    <li>White paper</li>
+                    <li>Protractor</li>
+                    <li>Ruler</li>
+                </ul>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Procedure:</div>
+                <ol>
+                    <li>Place mirror on paper and draw line around it</li>
+                    <li>Draw normal perpendicular to mirror surface</li>
+                    <li>Place two pins in front of mirror (incident rays)</li>
+                    <li>Look in mirror and place two pins such that they align with images</li>
+                    <li>Mark positions of all pins</li>
+                    <li>Draw incident and reflected rays</li>
+                    <li>Measure angles of incidence and reflection</li>
+                    <li>Verify that angle of incidence = angle of reflection</li>
+                    <li>Repeat for different angles (at least 3 times)</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="lab-experiment">
+            <div class="lab-title">Experiment 6: Determination of Specific Heat Capacity of Water</div>
+            
+            <div class="lab-section">
+                <div class="lab-section-title">Aim:</div>
+                <p>To determine specific heat capacity of water using electrical heating.</p>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Apparatus:</div>
+                <ul>
+                    <li>Calorimeter with stirrer</li>
+                    <li>Thermometer</li>
+                    <li>Immersion heater (electric)</li>
+                    <li>Power supply</li>
+                    <li>Ammeter</li>
+                    <li>Voltmeter</li>
+                    <li>Stopwatch</li>
+                    <li>Balance</li>
+                </ul>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Procedure:</div>
+                <ol>
+                    <li>Measure mass of water (m) using balance</li>
+                    <li>Record initial temperature (T₁)</li>
+                    <li>Connect heater and note voltage (V) and current (I)</li>
+                    <li>Switch on heater and record time (t)</li>
+                    <li>Stir water continuously to ensure even heating</li>
+                    <li>Switch off after temperature rises by 10-15°C</li>
+                    <li>Record final temperature (T₂)</li>
+                    <li>Calculate: Q = VIt (heat supplied)
+                        ΔT = T₂ - T₁
+                        c = Q/(mΔT)</li>
+                </ol>
+            </div>
+
+            <div class="lab-section">
+                <div class="lab-section-title">Precautions:</div>
+                <ul>
+                    <li>Insulate calorimeter to minimize heat loss</li>
+                    <li>Stir water to distribute heat evenly</li>
+                    <li>Keep heater fully immersed</li>
+                    <li>Don't let thermometer touch bottom of container</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Navigation -->
@@ -676,7 +1284,7 @@
         <div class="footer">
             <p>Last updated: 2026</p>
             <p>© Nicholas Mwesigwa - My Learning Website</p>
-            <p><em>All questions and answers based on O-Level Physics curriculum (1991-2011)</em></p>
+            <p><em>Complete O-Level Physics Notes with Laboratory Experiments</em></p>
         </div>
     </div>
 </body>
