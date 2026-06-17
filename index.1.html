@@ -21,15 +21,96 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .sidebar-title {
+            color: #667eea;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin: 0;
+        }
+
+        .sidebar-menu a {
+            display: block;
+            padding: 12px 15px;
+            color: #555;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .sidebar-menu a:hover {
+            background: #f5f7ff;
+            border-left-color: #667eea;
+            color: #667eea;
+            padding-left: 20px;
+        }
+
+        .sidebar-menu a.active {
+            background: #f0f4ff;
+            border-left-color: #764ba2;
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .sidebar-category {
+            color: #764ba2;
+            font-weight: bold;
+            padding: 12px 15px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .toggle-sidebar {
+            display: none;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            flex: 1;
             background: white;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             padding: 40px;
+            min-width: 0;
         }
 
         h1 {
@@ -245,10 +326,111 @@
             border-left: 3px solid #667eea;
             padding-left: 15px;
         }
+
+        /* Scrollbar styling */
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #764ba2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: static;
+                max-height: none;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .toggle-sidebar {
+                display: block;
+            }
+
+            .sidebar {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 20px;
+                width: calc(100% - 40px);
+                z-index: 1000;
+            }
+
+            .sidebar.active {
+                display: block;
+            }
+
+            body {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-title">📚 Physics Topics</div>
+        <ul class="sidebar-menu">
+            <li class="sidebar-category">Core Topics</li>
+            <li><a href="#measurement">1. Measurement & Kinematics</a></li>
+            <li><a href="#forces">2. Forces & Motion</a></li>
+            <li><a href="#energy">3. Energy & Power</a></li>
+            <li><a href="#pressure">4. Pressure</a></li>
+            <li><a href="#density">5. Density</a></li>
+            <li><a href="#waves">6. Waves & Oscillations</a></li>
+            <li><a href="#sound">7. Sound</a></li>
+            
+            <li class="sidebar-category">Advanced Topics</li>
+            <li><a href="#light">8. Light & Optics</a></li>
+            <li><a href="#electricity">9. Electricity</a></li>
+            <li><a href="#magnetism">10. Magnetism</a></li>
+            <li><a href="#heat">11. Heat & Thermodynamics</a></li>
+            <li><a href="#atomic">12. Atomic Physics</a></li>
+            
+            <li class="sidebar-category">Experiments</li>
+            <li><a href="#exp1">Exp 1: Density</a></li>
+            <li><a href="#exp2">Exp 2: Ohm's Law</a></li>
+            <li><a href="#exp3">Exp 3: Focal Length</a></li>
+            <li><a href="#exp4">Exp 4: Pendulum</a></li>
+            <li><a href="#exp5">Exp 5: Reflection</a></li>
+            <li><a href="#exp6">Exp 6: Specific Heat</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
+        <button class="toggle-sidebar" id="toggleBtn">☰ Menu</button>
+        
         <h1><span class="emoji">📚</span> O-Level Physics - Complete Notes</h1>
         <p class="subtitle">All Topics with Definitions, Formulas, and Laboratory Experiments</p>
 
@@ -273,7 +455,7 @@
         </div>
 
         <!-- 1. MEASUREMENT & KINEMATICS -->
-        <h2><span class="emoji">📏</span> 1. Measurement & Kinematics</h2>
+        <h2 id="measurement"><span class="emoji">📋</span> 1. Measurement & Kinematics</h2>
 
         <div class="topic-section">
             <h3>Physical Quantities & Units</h3>
@@ -349,7 +531,7 @@
         </div>
 
         <!-- 2. FORCES & MOTION -->
-        <h2><span class="emoji">💪</span> 2. Forces & Motion (Newton's Laws)</h2>
+        <h2 id="forces"><span class="emoji">💪</span> 2. Forces & Motion (Newton's Laws)</h2>
 
         <div class="topic-section">
             <h3>Newton's Laws of Motion</h3>
@@ -389,7 +571,7 @@
         </div>
 
         <!-- 3. ENERGY, WORK & POWER -->
-        <h2><span class="emoji">⚡</span> 3. Energy, Work & Power</h2>
+        <h2 id="energy"><span class="emoji">⚡</span> 3. Energy, Work & Power</h2>
 
         <div class="topic-section">
             <h3>Work & Energy</h3>
@@ -434,7 +616,7 @@
         </div>
 
         <!-- 4. PRESSURE -->
-        <h2><span class="emoji">📊</span> 4. Pressure</h2>
+        <h2 id="pressure"><span class="emoji">📊</span> 4. Pressure</h2>
 
         <div class="topic-section">
             <h3>Pressure Definition & Formulas</h3>
@@ -461,7 +643,7 @@
         </div>
 
         <!-- 5. DENSITY -->
-        <h2><span class="emoji">🎯</span> 5. Density & Relative Density</h2>
+        <h2 id="density"><span class="emoji">🎨</span> 5. Density & Relative Density</h2>
 
         <div class="topic-section">
             <h3>Density</h3>
@@ -513,7 +695,7 @@
         </div>
 
         <!-- 6. WAVES & OSCILLATIONS -->
-        <h2><span class="emoji">🌊</span> 6. Waves & Oscillations</h2>
+        <h2 id="waves"><span class="emoji">🌊</span> 6. Waves & Oscillations</h2>
 
         <div class="topic-section">
             <h3>Simple Harmonic Motion (SHM)</h3>
@@ -569,7 +751,7 @@
         </div>
 
         <!-- 7. SOUND -->
-        <h2><span class="emoji">🔊</span> 7. Sound</h2>
+        <h2 id="sound"><span class="emoji">🔊</span> 7. Sound</h2>
 
         <div class="topic-section">
             <h3>Sound Waves</h3>
@@ -605,7 +787,7 @@
         </div>
 
         <!-- 8. LIGHT & OPTICS -->
-        <h2><span class="emoji">💡</span> 8. Light & Optics</h2>
+        <h2 id="light"><span class="emoji">💡</span> 8. Light & Optics</h2>
 
         <div class="topic-section">
             <h3>Nature of Light</h3>
@@ -709,7 +891,7 @@
         </div>
 
         <!-- 9. ELECTRICITY -->
-        <h2><span class="emoji">⚡</span> 9. Electricity</h2>
+        <h2 id="electricity"><span class="emoji">⚡</span> 9. Electricity</h2>
 
         <div class="topic-section">
             <h3>Electric Charge & Current</h3>
@@ -791,7 +973,7 @@
         </div>
 
         <!-- 10. MAGNETISM -->
-        <h2><span class="emoji">🧲</span> 10. Magnetism</h2>
+        <h2 id="magnetism"><span class="emoji">🧲</span> 10. Magnetism</h2>
 
         <div class="topic-section">
             <h3>Magnetic Fields & Forces</h3>
@@ -848,7 +1030,7 @@
         </div>
 
         <!-- 11. HEAT & THERMODYNAMICS -->
-        <h2><span class="emoji">🔥</span> 11. Heat & Thermodynamics</h2>
+        <h2 id="heat"><span class="emoji">🔥</span> 11. Heat & Thermodynamics</h2>
 
         <div class="topic-section">
             <h3>Temperature & Heat</h3>
@@ -949,7 +1131,7 @@
         </div>
 
         <!-- 12. ATOMIC PHYSICS & RADIOACTIVITY -->
-        <h2><span class="emoji">⚛️</span> 12. Atomic Physics & Radioactivity</h2>
+        <h2 id="atomic"><span class="emoji">⚛️</span> 12. Atomic Physics & Radioactivity</h2>
 
         <div class="topic-section">
             <h3>Atomic Structure</h3>
@@ -994,7 +1176,7 @@
             
             <div class="note-box">
                 <h4>Nuclear Notation:</h4>
-                <div class="formula">ᴬₓX
+                <div class="formula">ᴬ_ᴢX
                 Where A = mass number (protons + neutrons)
                 Z = atomic number (number of protons)
                 X = element symbol</div>
@@ -1033,7 +1215,7 @@
         </div>
 
         <!-- 13. LABORATORY EXPERIMENTS -->
-        <h2><span class="emoji">🔬</span> 13. Physics Laboratory Experiments</h2>
+        <h2 id="exp1"><span class="emoji">🔬</span> 13. Physics Laboratory Experiments</h2>
 
         <div class="lab-experiment">
             <div class="lab-title">Experiment 1: Measurement of Density Using Displacement Method</div>
@@ -1077,7 +1259,7 @@
         </div>
 
         <div class="lab-experiment">
-            <div class="lab-title">Experiment 2: Verification of Ohm's Law</div>
+            <div class="lab-title" id="exp2">Experiment 2: Verification of Ohm's Law</div>
             
             <div class="lab-section">
                 <div class="lab-section-title">Aim:</div>
@@ -1128,7 +1310,7 @@
         </div>
 
         <div class="lab-experiment">
-            <div class="lab-title">Experiment 3: Determination of Focal Length of Convex Lens</div>
+            <div class="lab-title" id="exp3">Experiment 3: Determination of Focal Length of Convex Lens</div>
             
             <div class="lab-section">
                 <div class="lab-section-title">Aim:</div>
@@ -1160,7 +1342,7 @@
         </div>
 
         <div class="lab-experiment">
-            <div class="lab-title">Experiment 4: Study of Simple Pendulum & Verification of T ∝ √L</div>
+            <div class="lab-title" id="exp4">Experiment 4: Study of Simple Pendulum & Verification of T ∝ √L</div>
             
             <div class="lab-section">
                 <div class="lab-section-title">Aim:</div>
@@ -1192,7 +1374,7 @@
         </div>
 
         <div class="lab-experiment">
-            <div class="lab-title">Experiment 5: Laws of Reflection Using Plane Mirror</div>
+            <div class="lab-title" id="exp5">Experiment 5: Laws of Reflection Using Plane Mirror</div>
             
             <div class="lab-section">
                 <div class="lab-section-title">Aim:</div>
@@ -1227,7 +1409,7 @@
         </div>
 
         <div class="lab-experiment">
-            <div class="lab-title">Experiment 6: Determination of Specific Heat Capacity of Water</div>
+            <div class="lab-title" id="exp6">Experiment 6: Determination of Specific Heat Capacity of Water</div>
             
             <div class="lab-section">
                 <div class="lab-section-title">Aim:</div>
@@ -1284,8 +1466,46 @@
         <div class="footer">
             <p>Last updated: 2026</p>
             <p>© Nicholas Mwesigwa - My Learning Website</p>
-            <p><em>Complete O-Level Physics Notes with Laboratory Experiments</em></p>
+            <p><em>Complete O-Level Physics Notes with Laboratory Experiments and Left Navigation Sidebar</em></p>
         </div>
     </div>
+
+    <script>
+        // Toggle sidebar on mobile
+        const toggleBtn = document.getElementById('toggleBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // Close sidebar when link is clicked
+        const sidebarLinks = document.querySelectorAll('.sidebar-menu a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+            });
+        });
+
+        // Update active link based on scroll position
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('h2');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
